@@ -1,0 +1,55 @@
+.catLoaderContainer {
+    display: center;
+    position: absolute;
+    left: 400px;
+    right: 40px;
+    top: 20%;
+    bottom: 10%;
+    height: 100vh;
+    background-color: #192833ff;
+
+    &::before {
+      content: '';
+      background-image: url('../../assets/images/nyancat.gif');
+      animation: fadeIn 1s 1.7s forwards;
+  }
+
+    &::after {
+      content: '';
+      background-image: url('../../assets/images/nyancat.gif');
+      animation: fadeOut 1s 1.7s backwards;
+  }
+  }
+
+  .nyanCatGif {
+    width: 100px;
+    height: 100px; 
+    animation: moveCat 5s ease-in-out  infinite;
+  }
+
+  @keyframes moveCat {
+    0% {
+      transform: translateX(0); /* Start at position A */
+    }
+    100% {
+      transform: translateX(300px); /* Move to position B */
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}

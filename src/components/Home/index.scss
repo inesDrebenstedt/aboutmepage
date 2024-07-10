@@ -40,8 +40,11 @@
       }
 
       img {
-          margin-left: 20px;
-          vertical-align: -70%;
+        position: absolute;
+        left: 100%;
+        top: -10%;
+        //  margin-left: 20px;
+          vertical-align: -120%;
           opacity: 0;
           width: 330px;
           height: auto;
