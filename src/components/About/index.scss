@@ -56,6 +56,14 @@
     }
 }
 
+.myface {
+    width: 50%;
+    top: -150%;
+    left: 340px;
+    position: absolute;
+    display: flex;
+}
+
 @keyframes spincube {
     from,
     to {

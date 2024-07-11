@@ -13,7 +13,9 @@ const Sidebar = () => {
     return (
     <div className='nav-bar'>
         <Link className='logo' to ='/'>
+        <a href="https://inesDrebenstedt.github.io" target="_blank">
         <img className='img' src={SidebarLogoCircle} alt="logo"/>
+        </a>
         </Link>
         <nav>
             <NavLink exact="true" activeclassname="active" to="/">

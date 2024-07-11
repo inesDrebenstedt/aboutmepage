@@ -1,6 +1,5 @@
 
-import LogoInes from '../../assets/images/LogoInes.png';
-import PageLogo from '../../assets/images/PageLogo.png';
+import SidebarLogoCircle from '../../assets/images/SidebarLogoCircle.png';
 import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from "react";
 import AnimatedLetters from '../AnimatedLetters';
@@ -30,6 +29,8 @@ const Home = () => {
 
                 /*
             <img src={PageLogo} alt="fullStackDeveloper"/>
+
+            <Logo />
             */
 
    return (
@@ -37,9 +38,8 @@ const Home = () => {
       <div className="container home-page">
          <div className="text-zone">
             <h1>
-
+            <img src={SidebarLogoCircle} alt="fullStackDeveloper"/>
             <br />
-
                <span className={letterClass}>H</span>    
                <span className={`$letterClass _12`}>i,</span>                          
                <br /> 
@@ -58,7 +58,7 @@ const Home = () => {
             <h2>Java / JavaScript / SQL / NoSQL / HTML / CSS</h2>
             <Link to="/contact" className='flat-button'>CONTACT ME</Link>
             </div>
-            <Logo />
+            
       </div>
       <CatLoader />
       </>

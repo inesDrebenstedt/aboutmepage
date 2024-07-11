@@ -1,5 +1,5 @@
-import CubeLogo from '../../../assets/images/CubeLogo1.png';
-import LogoS from '../../../assets/images/logo-s.png';
+import SidebarLogoCircle from '../../../assets/images/SidebarLogoCircle.png';
+//import LogoS from '../../../assets/images/logo-s.png';
 import React, { useEffect, useState, useRef } from "react";
 import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
 import gsap from 'gsap-trial';
@@ -34,7 +34,7 @@ const Logo = () => {
 
     return (
         <div className='logo-container' ref={bgRef}>
-            <img ref={solidLogoRef} className='solid-logo' src={LogoS} alt="CubeLogo"/>
+            <img ref={solidLogoRef} className='solid-logo' src={SidebarLogoCircle} alt="CubeLogo"/>
             <svg
         width="559pt"
         height="897pt"
