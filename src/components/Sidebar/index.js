@@ -12,10 +12,10 @@ const Sidebar = () => {
    
     return (
     <div className='nav-bar'>
-        <Link className='logo' to ='/'>
-        <a href="https://inesDrebenstedt.github.io" target="_blank">
-        <img className='img' src={SidebarLogoCircle} alt="logo"/>
-        </a>
+        <Link className='logo' to ='https://inesDrebenstedt.github.io'>        
+            <span>
+                <img className='img' src={SidebarLogoCircle} alt="logo"/>
+            </span>
         </Link>
         <nav>
             <NavLink exact="true" activeclassname="active" to="/">
@@ -29,15 +29,19 @@ const Sidebar = () => {
             </NavLink>
         </nav>
         <ul>
-            <li>
+            <li>                
                 <a target="_blank" rel='noreferrer' href='https://www.linkedin.com/in/idrebenstedt/'>
-                    <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e"/>
+                    <span>
+                        <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e"/>
+                    </span>
                 </a>
             </li>
-            <li>
+            <li>               
                 <a target="_blank" rel='noreferrer' href='https://github.com/inesDrebenstedt'>
-                    <FontAwesomeIcon icon={faGithub} color="#4d4d4e"/>
-                </a>
+                    <span>
+                        <FontAwesomeIcon icon={faGithub} color="#4d4d4e"/>
+                    </span>                    
+                </a>               
             </li>
         </ul>
     </div>

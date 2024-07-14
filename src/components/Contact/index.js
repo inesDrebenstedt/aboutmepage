@@ -8,35 +8,48 @@ import emailjs from '@emailjs/browser'
 
 const Contact = () => {
    const [letterClass, setLetterClass] = useState('text-animate')
-   const refForm = useRef()
 
    useEffect(() => {
-     const timer = setTimeout(() => {
-       setLetterClass('text-animate-hover')
-     }, 4000)
-     return () => {
-       clearTimeout(timer)
-     }
-   }, [])
+      const timer = setTimeout(() => {
+        setLetterClass('text-animate-hover')
+      }, 4000)
+      return () => {
+        clearTimeout(timer)
+      }
+    }, [])
 
-   const sendEmail = (e) => {
-      e.preventDefault()
 
-      emailjs.sendForm(
-         'gmail',
-         '177FZ9o8u6z_9TCY8',
-         refForm.current,
-         '177FZ9o8u6z_9TCY8'
-      )
+const refForm = useRef();
+
+  const sendEmail = (e) => {
+   const form = e.target;
+   const formData = new FormData(form);
+   const name = formData.get('from_name');
+   const email = formData.get('sender_email');
+   const subject = formData.get('subjectField');
+   const message = formData.get('message');
+
+    e.preventDefault();
+
+    //TODO ines: replace with values from .env
+
+    emailjs
+      .sendForm(process.env.REACT_APP_EMAILJS_SERVICE_KEY, process.env.REACT_APP_EMAILJS_TEMPLATE_NAME, refForm.current, {
+        publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+        from_name: name,
+        sender_email: email,
+        subjectField: subject,
+        message
+      })
       .then(
-         () => {
-            alert('Message successfully sent!')
-            window.location.reload(false)
-         },
-         () => {
-            alert('Failed to send the message. Please try again!')
-         }
-      )
+        () => {
+          console.log('Message successfully sent!');
+        },
+        (error) => {
+          console.log('Failed to send the message. Please try again!', error.text);
+        },
+      );
+      
    }
 
    return (
@@ -51,30 +64,31 @@ const Contact = () => {
                   />
                </h1>
                <p >
-               I'm excited to connect with professionals who are passionate about innovative business solutions and strategic growth opportunities. 
+               I'm excited to connect with people who are passionate about innovative business solutions and strategic growth opportunities. 
+               </p>
                <p >
                Maybe you are also eager to explore potential collaborations or career opportunities that align with your and my expertise and vision?
                </p>
-               <p ></p>
+               <p >
                Please feel free to reach out so we can discuss how we can achieve great results together.
                </p>
                <div className='contact-form'>
-                  <form ref={refForm} onSubmit={sendEmail}>
+                  <form name='myForm' ref={refForm} onSubmit={sendEmail}>
                      <ul>
                         <li className='half'>
-                           <input type="text" name="nameField" placeholder="Your name" required />
+                           <input type="text" name="from_name" placeholder="Your name" required />
                         </li>
                         <li className='half'>
-                           <input type="email" name="emailField" placeholder="Your email" required />
+                           <input type="email" name="sender_email" placeholder="Your email" required />
                         </li>
                         <li className='full'>
                            <input placeholder="Subject of your message" type="text" name="subjectField" required/>
                         </li>
                         <li >
-                           <textarea placeholder='Message body' name='messageField' required>  </textarea>
+                           <textarea placeholder='Message body' name='message' required /> 
                         </li>
                         <li>
-                           <input type="submit" className='flat-button' value="SEND"/>
+                           <input type="submit" className='flat-button' value="SEND" />
                         </li>
                      </ul>
                   </form>

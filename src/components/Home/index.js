@@ -36,10 +36,11 @@ const Home = () => {
    return (
       <>
       <div className="container home-page">
+      <img className="logo-img" src={SidebarLogoCircle} alt="fullStackDeveloper"/>
+      <br />
          <div className="text-zone">
             <h1>
-            <img src={SidebarLogoCircle} alt="fullStackDeveloper"/>
-            <br />
+
                <span className={letterClass}>H</span>    
                <span className={`$letterClass _12`}>i,</span>                          
                <br /> 
@@ -56,7 +57,7 @@ const Home = () => {
             <br />
             <br />
             <h2>Java / JavaScript / SQL / NoSQL / HTML / CSS</h2>
-            <Link to="/contact" className='flat-button'>CONTACT ME</Link>
+            <Link to="contact" className='flat-button'>CONTACT ME</Link>
             </div>
             
       </div>
