@@ -1,5 +1,4 @@
 import SidebarLogoCircle from '../../../assets/images/SidebarLogoCircle.png';
-//import LogoS from '../../../assets/images/logo-s.png';
 import React, { useEffect, useState, useRef } from "react";
 import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
 import gsap from 'gsap-trial';

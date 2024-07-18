@@ -1,4 +1,4 @@
-import './index.scss'
+import './sidebar.scss'
 import { Link, NavLink } from 'react-router-dom'
 import SidebarLogoCircle from '../../assets/images/SidebarLogoCircle.png'
 import LogoSubtitle from '../../assets/images/LogoSubtitle.png'

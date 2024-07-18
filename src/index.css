@@ -13,23 +13,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/*
-old bg: // #022c43;
-
-myname {
-  margin: 0;
-  font-family: 300 11px/1.4 'Clicky Bricks', 'sans-serif';
-  color: #f8c200;
-  background: #149d74;
-  overflow: hidden;
-  display: inline;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --screen-scale: 1;
+  --screen-ratio: 1;
 }
 
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-    */

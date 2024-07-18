@@ -1,5 +1,5 @@
 
-import './index.scss';
+import './contact.scss';
 import Loader from 'react-loaders'
 import { useEffect, useRef, useState } from "react";
 import AnimatedLetters from '../AnimatedLetters';
@@ -7,6 +7,7 @@ import emailjs from '@emailjs/browser'
 
 
 const Contact = () => {
+
    const [letterClass, setLetterClass] = useState('text-animate')
 
    useEffect(() => {
@@ -57,12 +58,16 @@ const refForm = useRef();
          <div className='container contact-page'>
             <div className='text-zone'>
                <h1>
+
                   <AnimatedLetters 
                   letterClass={letterClass}
-                  strArray={['C', 'o', 'n', 't', 'a', 'c', 't', '', 'm', 'e']}
+                  strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}
                   idx={15}
                   />
+
                </h1>
+
+               <br />
                <p >
                I'm excited to connect with people who are passionate about innovative business solutions and strategic growth opportunities. 
                </p>

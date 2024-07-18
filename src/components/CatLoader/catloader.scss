@@ -2,11 +2,11 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    left: -55px;
-    right: 40px;
+    left: 20%;
     top: 20%;
+    right: 40px;
     bottom: 10%;
-    height: 100vh;
+    height: 10%;
     background-color: #192833ff;
 
     &::before {
@@ -33,7 +33,7 @@
       transform: translateX(0); /* Start at position A */
     }
     100% {
-      transform: translateX(380px); /* Move to position B */
+      transform: translateX(1200px); /* Move to position B */
     }
   }
 
