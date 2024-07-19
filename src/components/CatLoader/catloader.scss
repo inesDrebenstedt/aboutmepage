@@ -1,9 +1,14 @@
+
+:root {
+  --window-width: calc(100vw);
+}
+
 .catLoaderContainer {
     display: flex;
-    justify-content: center;
-    position: absolute;
-    left: 20%;
-    top: 20%;
+    position: fixed;
+    left: 30%;
+    top: 50%;
+    margin-top: 8%;;
     right: 40px;
     bottom: 10%;
     height: 10%;
@@ -12,14 +17,13 @@
     &::before {
       content: '';
       background-image: url('../../assets/images/nyancat.gif');
-      animation: fadeIn 1s 1.7s forwards;
+      animation: fadeCatIn 1s 1.7s forwards;
   }
 
     &::after {
       content: '';
       background-image: url('../../assets/images/nyancat.gif');
-      animation: fadeOut 1s 1.7s backwards;
-  }
+      //animation: fadeCatOut 1s 1.7s backwards;
   }
 
   .nyanCatGif {
@@ -29,28 +33,33 @@
   }
 
   @keyframes moveCat {
+    
     0% {
       transform: translateX(0); /* Start at position A */
     }
     100% {
-      transform: translateX(1200px); /* Move to position B */
+      transform: translateX(calc(var(--window-width) * 0.9));; /* Move to position B */
     }
   }
 
-  @keyframes fadeIn {
-    from {
+  /*
+  @keyframes fadeCatIn {
+    0% {
         opacity: 0;
     }
-    to {
+    90% {
         opacity: 1;
     }
 }
 
-@keyframes fadeOut {
-  from {
+@keyframes fadeCatOut {
+  90% {
       opacity: 1;
   }
-  to {
+  100% {
       opacity: 0;
   }
 }
+*/
+  }
+

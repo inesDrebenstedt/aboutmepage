@@ -1,11 +1,11 @@
 // So importiert man eine neue Schriftart: @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-.nav-bar {
-
+.my-side-bar {
+    display: flex;
     background: #181818;
     width: 7%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 3;
 
@@ -13,7 +13,7 @@
         display: flex;
         padding: 8px 0;
 
-        img {
+        .logoimage {
             display: flex;
             margin: 8px auto;
             width: 100%;
@@ -42,9 +42,12 @@
             position: relative;
             text-decoration: none;
 
+            
             i {
                 transition: all 0.3s ease-out;
             }
+            
+                
 
             &:hover {
                 color: #ffd700;

@@ -3,7 +3,7 @@ import SidebarLogoCircle from '../../assets/images/SidebarLogoCircle.png';
 import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from "react";
 import AnimatedLetters from '../AnimatedLetters';
-import CatLoader from '../CatLoader';
+import CatLoader from '../CatLoader/catloader.js';
 import './home.scss';
 
 const Home = () => {
@@ -23,8 +23,8 @@ const Home = () => {
 
    return (
       <>
-      <div className="container home-page">
       <CatLoader />
+      <div className="container home-page">
       <img className="logo-img" src={SidebarLogoCircle} alt="fullStackDeveloper"/>
       <br />
          <div className="text-zone">
