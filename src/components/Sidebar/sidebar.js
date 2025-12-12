@@ -12,7 +12,7 @@ const Sidebar = () => {
    
     return (
     <div className='my-side-bar'>
-        <Link className='logo' to ='https://inesDrebenstedt.github.io'>        
+        <Link className='logo' to ='https://github.com/inesDrebenstedt'>        
             <span>
                 <img className='logoimage' src={SidebarLogoCircle} alt="logo"/>
             </span>
