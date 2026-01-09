@@ -22,7 +22,7 @@ const useScreenScale = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  console.log('=======================> ' + scale + ', ' + ratio);
+  //console.log('=======================> ' + scale + ', ' + ratio);
 
   return { scale, ratio };
 };
